@@ -1,0 +1,14 @@
+// Importamos somente o resolve do "path"
+const { resolve } = require("path");
+
+// Configurando o sequelizer
+module.exports = {
+  // falando o caminho da configuração. Esta na pasta raiz do programa, em src, confg, database.js
+  config: resolve(__dirname, "src", "config", "database.js"),
+  // Caminho dos models -> Modelo que serar inserido no banco
+  "models-path": resolve(__dirname, "src", "models"),
+  // Caminho de migrações -> Migrações = criação de tabelas
+  "migrations-path": resolve(__dirname, "src", "database", "migrations"),
+  // Caminho dos seeders -> Utilizado para inserir dados para testes. 
+  "seeders-path": resolve(__dirname, "src", "database", "seeds"),
+};
