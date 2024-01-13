@@ -47,7 +47,10 @@ class TokenController {
     });
 
     // Estamos devolvendo este token
-    return res.json({ token, user: { nome: user.nome, id, email } });
+    return res.json({
+      token,
+      user: { id: user.id, nome: user.nome, email: user.email },
+    });
   }
 }
 
