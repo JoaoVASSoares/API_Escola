@@ -11,7 +11,7 @@ var _loginRequired = require('../middlewares/loginRequired'); var _loginRequired
 const router = new (0, _express.Router)();
 
 // Fazendo uma rota post utilizando a função create do controller. Também podemos utilizar o metodo store
-router.post("/",_loginRequired2.default, _UserController2.default.create);
+router.post("/", _UserController2.default.create);
 
 // Tanto o index quanto o show não deveria existir. (Falha de segurança)
 
