@@ -11,7 +11,7 @@ import loginRequired from "../middlewares/loginRequired";
 const router = new Router();
 
 // Fazendo uma rota post utilizando a função create do controller. Também podemos utilizar o metodo store
-router.post("/",loginRequired, userController.create);
+router.post("/", userController.create);
 
 // Tanto o index quanto o show não deveria existir. (Falha de segurança)
 
